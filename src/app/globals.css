@@ -131,6 +131,38 @@
   }
 }
 
+@keyframes v-rise {
+  from {
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes v-stitch {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@utility v-rise {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: v-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 120px entry 420px;
+    }
+  }
+}
+
+@utility v-stitch {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: v-stitch linear both;
+      animation-timeline: view();
+      animation-range: entry 120px entry 420px;
+    }
+  }
+}
+
 @utility v-photo-fade {
   background: linear-gradient(to right, #fff, #fff0);
 }

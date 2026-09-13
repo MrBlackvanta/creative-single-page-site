@@ -20,11 +20,11 @@ export default function Strategic() {
           />
         </picture>
 
-        <Squiggle className="text-red absolute bottom-0 left-6 w-15.75 translate-y-1/2 md:top-40 md:bottom-auto md:left-full md:-translate-x-1/2 md:-translate-y-1/2 lg:top-66 lg:w-33.75" />
+        <Squiggle className="v-stitch text-red absolute bottom-0 left-6 w-15.75 translate-y-1/2 md:top-40 md:bottom-auto md:left-full md:-translate-x-1/2 md:-translate-y-1/2 lg:top-66 lg:w-33.75" />
       </div>
 
       <div className="bg-ink py-18 md:ml-[49.22%] md:py-30 lg:ml-[51.04%] lg:py-50">
-        <div className="px-6 text-white md:pr-[10.26%] md:pl-[17.69%] lg:pr-[15.04%] lg:pl-[21.84%]">
+        <div className="v-rise px-6 text-white md:pr-[10.26%] md:pl-[17.69%] lg:pr-[15.04%] lg:pl-[21.84%]">
           <h2 className="text-h2 lg:text-h2-lg">
             <span className="text-red">Design</span> is
             <br className="hidden md:inline lg:hidden" /> strategic.

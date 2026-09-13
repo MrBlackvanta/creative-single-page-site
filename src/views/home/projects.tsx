@@ -48,10 +48,10 @@ export default function Projects() {
           aria-hidden="true"
           className="bg-ink pointer-events-auto absolute inset-y-0 left-0 w-full md:w-[50.78%] lg:w-[51.04%]"
         >
-          <Squiggle className="absolute top-35 left-full hidden w-15.75 -translate-x-1/2 -translate-y-1/2 -scale-y-100 text-white md:block lg:top-54 lg:w-33.75" />
+          <Squiggle className="v-stitch absolute top-35 left-full hidden w-15.75 -translate-x-1/2 -translate-y-1/2 -scale-y-100 text-white md:block lg:top-54 lg:w-33.75" />
         </div>
 
-        <div className="v-container relative py-16 md:py-25 lg:py-38">
+        <div className="v-container v-rise relative py-16 md:py-25 lg:py-38">
           <h2 className="text-h2 lg:text-h2-lg pointer-events-auto text-white md:max-w-70.25 lg:max-w-111.25">
             {project.title}
           </h2>
