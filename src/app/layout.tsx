@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Commissioner } from "next/font/google";
+import { SITE_URL } from "@/app/site";
 import "./globals.css";
-
-const SITE_URL =
-  "https://creative-single-page-site.abdelrhman-ahmed8881.workers.dev";
 
 const name = "creative";
 const title = `${name} | Branding & website design agency`;
