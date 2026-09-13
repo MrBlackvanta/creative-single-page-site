@@ -14,7 +14,7 @@ const shareImage = {
   url: "/opengraph-image.jpg",
   width: 1200,
   height: 630,
-  alt: "The creative wordmark above the headline Branding & website design agency.",
+  alt: "Two designers at their laptops, beside the word creative under the line Branding & website design agency.",
 };
 
 const commissioner = Commissioner({
