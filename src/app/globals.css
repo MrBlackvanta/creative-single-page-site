@@ -4,6 +4,8 @@
 @theme {
   --font-sans: var(--font-commissioner), ui-sans-serif, system-ui, sans-serif;
 
+  --container-content: 69.375rem;
+
   --color-red: #f94f4f;
   --color-red-surface: #dd363b;
   --color-red-hover: #ff9393;
@@ -63,8 +65,69 @@
     @apply font-sans;
     overflow-y: scroll;
   }
+  body {
+    @apply bg-white text-black;
+  }
   button:not(:disabled) {
     cursor: pointer;
+  }
+}
+
+@utility v-container {
+  padding-inline: max(--spacing(6), (100% - var(--container-content)) / 2);
+
+  @variant md {
+    padding-inline: max(--spacing(9.75), (100% - var(--container-content)) / 2);
+  }
+
+  @variant lg {
+    padding-inline: max(--spacing(16), (100% - var(--container-content)) / 2);
+  }
+}
+
+@utility v-focus {
+  @apply focus-visible:outline-ink focus-visible:outline-2 focus-visible:outline-offset-2;
+}
+
+@utility v-focus-on-dark {
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+}
+
+@utility v-btn {
+  @apply text-label-md flex h-16 items-center justify-center motion-safe:transition-colors;
+}
+
+@utility v-btn-lg {
+  @apply text-label-lg flex h-18 items-center justify-center motion-safe:transition-colors;
+}
+
+@utility v-btn-ink {
+  @apply bg-ink hover:bg-ink-hover text-white;
+}
+
+@utility v-btn-red {
+  @apply bg-red-surface hover:bg-red-hover hover:text-ink text-white;
+}
+
+@utility v-nav-link {
+  display: block;
+  width: fit-content;
+
+  &::after {
+    content: attr(data-label);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    font-weight: 700;
+    visibility: hidden;
+  }
+
+  @variant hover {
+    font-weight: 700;
+  }
+
+  @variant motion-safe {
+    transition: font-weight 200ms;
   }
 }
 
