@@ -3,6 +3,59 @@
 
 @theme {
   --font-sans: var(--font-commissioner), ui-sans-serif, system-ui, sans-serif;
+
+  --color-red: #f94f4f;
+  --color-red-surface: #dd363b;
+  --color-red-hover: #ff9393;
+  --color-ink: #191921;
+  --color-ink-hover: #434356;
+
+  --text-h1: 2.5rem;
+  --text-h1--line-height: 2.5rem;
+  --text-h1--font-weight: 800;
+  --text-h1-md: 3.5rem;
+  --text-h1-md--line-height: 3.5rem;
+  --text-h1-md--font-weight: 800;
+  --text-h1-lg: 5rem;
+  --text-h1-lg--line-height: 5.5rem;
+  --text-h1-lg--font-weight: 800;
+
+  --text-h2: 2rem;
+  --text-h2--line-height: 2.5rem;
+  --text-h2--font-weight: 800;
+  --text-h2-lg: 3.5rem;
+  --text-h2-lg--line-height: 4rem;
+  --text-h2-lg--font-weight: 800;
+
+  --text-h3: 0.9375rem;
+  --text-h3--line-height: 1.5625rem;
+  --text-h3--font-weight: 800;
+  --text-h3-lg: 1.25rem;
+  --text-h3-lg--line-height: 2rem;
+  --text-h3-lg--font-weight: 800;
+
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.5625rem;
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 2rem;
+
+  --text-nav: 0.9375rem;
+  --text-nav--line-height: 2rem;
+  --text-nav-lg: 1rem;
+  --text-nav-lg--line-height: 2rem;
+
+  --text-caption: 0.9375rem;
+  --text-caption--line-height: 1.25rem;
+
+  --text-label: 0.9375rem;
+  --text-label--line-height: 1.125rem;
+  --text-label--font-weight: 800;
+  --text-label-md: 1rem;
+  --text-label-md--line-height: 1.25rem;
+  --text-label-md--font-weight: 800;
+  --text-label-lg: 1.125rem;
+  --text-label-lg--line-height: 1.375rem;
+  --text-label-lg--font-weight: 800;
 }
 
 @layer base {
@@ -13,4 +66,17 @@
   button:not(:disabled) {
     cursor: pointer;
   }
+}
+
+@utility v-photo-fade {
+  background: linear-gradient(to right, #fff, #fff0);
+}
+
+@utility v-photo-scrim {
+  background: linear-gradient(
+    to bottom,
+    #0000 0%,
+    #0000008c 30%,
+    #000000bf 100%
+  );
 }
