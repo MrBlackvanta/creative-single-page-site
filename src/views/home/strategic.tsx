@@ -24,13 +24,13 @@ export default function Strategic() {
       </div>
 
       <div className="bg-ink py-18 md:ml-[49.22%] md:py-30 lg:ml-[51.04%] lg:py-50">
-        <div className="px-6 md:pr-[10.26%] md:pl-[17.69%] lg:pr-[15.04%] lg:pl-[21.84%]">
-          <h2 className="text-h2 lg:text-h2-lg text-red">
-            Design is
+        <div className="px-6 text-white md:pr-[10.26%] md:pl-[17.69%] lg:pr-[15.04%] lg:pl-[21.84%]">
+          <h2 className="text-h2 lg:text-h2-lg">
+            <span className="text-red">Design</span> is
             <br className="hidden md:inline lg:hidden" /> strategic.
           </h2>
 
-          <p className="text-body lg:text-body-lg mt-6 text-white md:mt-8 lg:mt-12">
+          <p className="text-body lg:text-body-lg mt-6 md:mt-8 lg:mt-12">
             “A well-crafted design strategy consistently produces desired
             outcomes and brand awareness. We are firm believers that success
             lies in creative collaboration with our clients.”

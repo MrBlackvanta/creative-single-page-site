@@ -1,5 +1,5 @@
 import { SiteHeader } from "@/components/layout";
-import { Hero, Strategic } from "@/views/home";
+import { Approach, Hero, Strategic } from "@/views/home";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <main>
         <Hero />
         <Strategic />
+        <Approach />
       </main>
     </>
   );
