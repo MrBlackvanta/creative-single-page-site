@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@source not "../../*.md";
+
+@theme {
+  --font-sans: var(--font-commissioner), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply font-sans;
+    overflow-y: scroll;
+  }
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
