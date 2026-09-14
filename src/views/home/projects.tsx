@@ -22,7 +22,7 @@ export default function Projects() {
 
   return (
     <section id="projects" aria-live="polite" className="relative">
-      <figure className="relative aspect-375/404 md:ml-[43%] lg:ml-[37.85%] lg:aspect-895/728 lg:min-h-132 lg:w-[62.15%]">
+      <figure className="relative isolate aspect-375/404 md:ml-[43%] lg:ml-[37.85%] lg:aspect-895/728 lg:min-h-132 lg:w-[62.15%]">
         {projects.map(({ title, images }, slide) => (
           <picture key={title} className="contents">
             <source media="(min-width: 64rem)" srcSet={images.desktop.src} />
