@@ -6,12 +6,19 @@ import { useState } from "react";
 
 export default function Projects() {
   const [index, setIndex] = useState(0);
+  const [outgoing, setOutgoing] = useState(0);
   const project = projects[index];
 
-  const step = (offset: number) =>
-    setIndex(
-      (current) => (current + offset + projects.length) % projects.length,
-    );
+  const step = (offset: number) => {
+    setOutgoing(index);
+    setIndex((index + offset + projects.length) % projects.length);
+  };
+
+  const slideLayer = (slide: number) => {
+    if (slide === index) return "v-fade z-10";
+    if (slide === outgoing) return "";
+    return "invisible";
+  };
 
   return (
     <section id="projects" aria-live="polite" className="relative">
@@ -26,14 +33,15 @@ export default function Projects() {
               width={375}
               height={404}
               loading="lazy"
-              className={`absolute inset-0 size-full object-cover ${
-                slide === index ? "" : "invisible"
-              }`}
+              className={`absolute inset-0 size-full object-cover ${slideLayer(slide)}`}
             />
           </picture>
         ))}
 
-        <figcaption className="v-photo-scrim absolute inset-x-0 bottom-0 flex h-[27.5%] flex-col justify-center pr-8 text-right text-white md:pr-10 lg:pr-38.5">
+        <figcaption
+          key={index}
+          className="v-photo-scrim v-fade absolute inset-x-0 bottom-0 z-20 flex h-[27.5%] flex-col justify-center pr-8 text-right text-white md:pr-10 lg:pr-38.5"
+        >
           <span className="text-caption lg:text-h3-lg font-extrabold">
             {project.client}
           </span>
@@ -48,11 +56,14 @@ export default function Projects() {
           aria-hidden="true"
           className="bg-ink pointer-events-auto absolute inset-y-0 left-0 w-full md:w-[50.78%] lg:w-[51.04%]"
         >
-          <Squiggle className="v-stitch absolute top-35 left-full hidden w-15.75 -translate-x-1/2 -translate-y-1/2 -scale-y-100 text-white md:block lg:top-54 lg:w-33.75" />
+          <Squiggle className="absolute top-35 left-full hidden w-15.75 -translate-x-1/2 -translate-y-1/2 -scale-y-100 text-white md:block lg:top-54 lg:w-33.75" />
         </div>
 
-        <div className="v-container v-rise relative py-16 md:py-25 lg:py-38">
-          <h2 className="text-h2 lg:text-h2-lg pointer-events-auto text-white md:max-w-70.25 lg:max-w-111.25">
+        <div className="v-container relative py-16 md:py-25 lg:py-38">
+          <h2
+            key={index}
+            className="text-h2 lg:text-h2-lg v-fade pointer-events-auto text-white md:max-w-70.25 lg:max-w-111.25"
+          >
             {project.title}
           </h2>
 

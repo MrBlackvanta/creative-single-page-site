@@ -131,35 +131,15 @@
   }
 }
 
-@keyframes v-rise {
+@keyframes v-fade {
   from {
-    transform: translateY(1rem);
+    opacity: 0;
   }
 }
 
-@keyframes v-stitch {
-  from {
-    transform: scaleX(0);
-  }
-}
-
-@utility v-rise {
+@utility v-fade {
   @media (prefers-reduced-motion: no-preference) {
-    @supports (animation-timeline: view()) {
-      animation: v-rise linear both;
-      animation-timeline: view();
-      animation-range: entry 120px entry 420px;
-    }
-  }
-}
-
-@utility v-stitch {
-  @media (prefers-reduced-motion: no-preference) {
-    @supports (animation-timeline: view()) {
-      animation: v-stitch linear both;
-      animation-timeline: view();
-      animation-range: entry 120px entry 420px;
-    }
+    animation: v-fade 400ms ease-out;
   }
 }
 
